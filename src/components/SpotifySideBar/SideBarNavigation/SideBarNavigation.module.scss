@@ -1,0 +1,30 @@
+.sideBarNavigation {
+  height: 10vh;
+  border-radius: 10px;
+  background-color: #121212;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  .navigationItemContainer {
+    display: flex;
+    gap: 20px;
+    .navigationIcon {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+    .navigationName {
+      color: rgb(150, 146, 146);
+      display: flex;
+      align-items: center;
+      font-family: DM Sans;
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -1.14px;
+      cursor: pointer;
+    }
+  }
+}

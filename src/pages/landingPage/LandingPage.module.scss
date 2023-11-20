@@ -1,0 +1,20 @@
+@import "./../../index.scss";
+
+.landingPageContainer {
+  background-color: black;
+  height: 100%;
+}
+
+.sideBarAndMain {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.main {
+  width: 80vw;
+  height: 100vh;
+  background-color: #121212;
+  padding: 20px;
+  overflow: scroll;
+}

@@ -1,0 +1,15 @@
+.recentlyPlayedHeader {
+  display: flex;
+  justify-content: space-between;
+  .recentlyPlayedText {
+    font-size: 23px;
+    color: white;
+    font-weight: 700;
+  }
+  .showMore {
+    font-size: 14px;
+    color: rgb(119, 116, 116);
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
