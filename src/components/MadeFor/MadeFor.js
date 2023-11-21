@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./RecentlyPlayed.module.scss";
 import SongsHeaderShowAll from "../../common/SongsHeaderShowAll/SongsHeaderShowAll";
+import styles from "./MadeFor.module.scss";
 
 const recentlyPlayedCard = [
   {
@@ -20,10 +20,10 @@ const recentlyPlayedCard = [
   },
 ];
 
-const RecentlyPlayed = () => {
+const MadeFor = () => {
   return (
-    <div className={styles.recentlyPlayedContainer}>
-      <SongsHeaderShowAll title={"Recently played"} />
+    <div className={styles.madeFor}>
+      <SongsHeaderShowAll title={"Made for Smriti Pradhan"} />
       <div className={styles.recentlyPlayedCardContainer}>
         {recentlyPlayedCard.map((item, index) => {
           return (
@@ -37,4 +37,4 @@ const RecentlyPlayed = () => {
   );
 };
 
-export default RecentlyPlayed;
+export default MadeFor;
