@@ -1,6 +1,7 @@
 import React from "react";
 import SongsHeaderShowAll from "../../common/SongsHeaderShowAll/SongsHeaderShowAll";
 import styles from "./MadeFor.module.scss";
+import SongsCard from "../../common/SongsCard/SongsCard";
 
 const recentlyPlayedCard = [
   {
@@ -26,11 +27,7 @@ const MadeFor = () => {
       <SongsHeaderShowAll title={"Made for Smriti Pradhan"} />
       <div className={styles.recentlyPlayedCardContainer}>
         {recentlyPlayedCard.map((item, index) => {
-          return (
-            <div>
-              <div className={styles.recentlyPlayedCard}></div>
-            </div>
-          );
+          return <SongsCard />;
         })}
       </div>
     </div>

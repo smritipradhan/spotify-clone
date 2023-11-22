@@ -1,10 +1,10 @@
 .sideBarNavigation {
-  height: 10vh;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #121212;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
+  padding: 30px;
   .navigationItemContainer {
     display: flex;
     gap: 20px;

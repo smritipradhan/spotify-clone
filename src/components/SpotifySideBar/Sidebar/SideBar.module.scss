@@ -4,76 +4,79 @@
   gap: 7px;
   display: flex;
   flex-direction: column;
-  height: 85vh;
-  padding: 30px;
-  .sideBarLibrary {
+
+  padding: 0 6px;
+  .libraryPlaylistContainer {
     background-color: #121212;
-    border-radius: 10px;
-    margin-top: 30px;
-    .navigationItemContainer {
-      display: flex;
-      justify-content: space-between;
-      .library {
+    padding: 20px 30px;
+    height: 100%;
+    .sideBarLibrary {
+      border-radius: 10px;
+      .navigationItemContainer {
         display: flex;
-        gap: 20px;
-        .navigationIcon {
+        justify-content: space-between;
+        .library {
           display: flex;
-          align-items: center;
-          cursor: pointer;
+          gap: 20px;
+          .navigationIcon {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+          }
+          .navigationName {
+            color: rgb(150, 146, 146);
+            display: flex;
+            align-items: center;
+            font-family: DM Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: -1.14px;
+            cursor: pointer;
+          }
         }
-        .navigationName {
-          color: rgb(150, 146, 146);
+        .addForward {
           display: flex;
-          align-items: center;
-          font-family: DM Sans;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: normal;
-          letter-spacing: -1.14px;
-          cursor: pointer;
-        }
-      }
-      .addForward {
-        display: flex;
-        color: rgb(156, 164, 164);
-        gap: 10px;
-        .addforwar {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 50%;
-          cursor: pointer;
-        }
-        .addforwar:hover {
-          background-color: rgb(43, 42, 42);
-          color: white;
+          color: rgb(156, 164, 164);
+          gap: 10px;
+          .addforwar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+          .addforwar:hover {
+            background-color: rgb(43, 42, 42);
+            color: white;
+          }
         }
       }
     }
-  }
 
-  .playlistArtistContainer {
-    margin-top: 30px;
-    .playlistArtistChip {
-      display: flex;
-      gap: 10px;
-      .playlistArtists {
-        background-color: #232323;
-        color: white;
-        align-items: center;
-        justify-content: center;
-        display: inline-block;
-        padding: 0 15px;
-        height: 33px;
-        font-size: 12px;
-        line-height: 33px;
-        border-radius: 25px;
-        font-weight: 400;
-        cursor: pointer;
-      }
-      .playlistArtists:hover {
-        background-color: #2f2f2f;
+    .playlistArtistContainer {
+      margin-top: 30px;
+      .playlistArtistChip {
+        display: flex;
+        gap: 10px;
+        .playlistArtists {
+          background-color: #232323;
+          color: white;
+          align-items: center;
+          justify-content: center;
+          display: inline-block;
+          padding: 0 15px;
+          height: 33px;
+          font-size: 12px;
+          line-height: 33px;
+          border-radius: 25px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+        .playlistArtists:hover {
+          background-color: #2f2f2f;
+        }
       }
     }
   }

@@ -1,0 +1,12 @@
+.recentlyPlayedCard {
+  height: 230px;
+  border-radius: 10px;
+  width: 160px;
+  padding: 14px;
+  background-color: rgb(66 66 65 / 13%);
+  img {
+    overflow: hidden;
+    object-fit: inherit;
+    height: 69%;
+  }
+}

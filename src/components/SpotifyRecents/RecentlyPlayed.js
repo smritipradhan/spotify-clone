@@ -1,36 +1,15 @@
 import React from "react";
 import styles from "./RecentlyPlayed.module.scss";
 import SongsHeaderShowAll from "../../common/SongsHeaderShowAll/SongsHeaderShowAll";
-
-const recentlyPlayedCard = [
-  {
-    name: "A",
-  },
-  {
-    name: "B",
-  },
-  {
-    name: "C",
-  },
-  {
-    name: "D",
-  },
-  {
-    name: "E",
-  },
-];
+import SongsCard from "../../common/SongsCard/SongsCard";
 
 const RecentlyPlayed = () => {
   return (
     <div className={styles.recentlyPlayedContainer}>
       <SongsHeaderShowAll title={"Recently played"} />
       <div className={styles.recentlyPlayedCardContainer}>
-        {recentlyPlayedCard.map((item, index) => {
-          return (
-            <div>
-              <div className={styles.recentlyPlayedCard}></div>
-            </div>
-          );
+        {[1, 2, 3, 4, 5, 6].map((item, index) => {
+          return <SongsCard />;
         })}
       </div>
     </div>
