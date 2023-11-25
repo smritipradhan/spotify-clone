@@ -51,7 +51,6 @@ const ArtistPlaylistPopover = ({ id, anchorEl, handleClose, open }) => {
   };
 
   const handleViewAsListChange = (event, index) => {
-    console.log(index);
     const viewAs = viewAsList.findIndex((item) => item.isSelected);
     if (viewAs === index) {
       //do nothing

@@ -1,15 +1,18 @@
 import React from "react";
-import styles from "./RecentlyPlayed.module.scss";
-import SongsHeaderShowAll from "../../common/SongsHeaderShowAll/SongsHeaderShowAll";
+import { useSelector } from "react-redux";
 import SongsCard from "../../common/SongsCard/SongsCard";
+import SongsHeaderShowAll from "../../common/SongsHeaderShowAll/SongsHeaderShowAll";
+import styles from "./RecentlyPlayed.module.scss";
 
 const RecentlyPlayed = () => {
+  const recentlyPlayedSongs = useSelector((state) => state.recentlyPlayedSong);
+
   return (
     <div className={styles.recentlyPlayedContainer}>
       <SongsHeaderShowAll title={"Recently played"} />
       <div className={styles.recentlyPlayedCardContainer}>
-        {[1, 2, 3, 4, 5, 6].map((item, index) => {
-          return <SongsCard />;
+        {recentlyPlayedSongs.map((item, index) => {
+          return <SongsCard title={item?.title} songImage={item?.songImage} />;
         })}
       </div>
     </div>

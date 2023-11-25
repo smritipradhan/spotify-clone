@@ -4,6 +4,7 @@ import SpotifyMostPlayed from "../../components/SpotifyMostPlayed/SpotifyMostPla
 import RecentlyPlayed from "../../components/SpotifyRecents/RecentlyPlayed";
 import SideBar from "./../../components/SpotifySideBar/Sidebar/SideBar.js";
 import styles from "./LandingPage.module.scss";
+import KahoNaPyar from "./../../assets/songs/kahonaPyarHain.mp3";
 
 const LandingPage = () => {
   return (
@@ -17,7 +18,9 @@ const LandingPage = () => {
           <MadeFor />
         </div>
       </div>
-      <div className={styles.player}></div>
+      <div className={styles.player}>
+        <audio src={KahoNaPyar} controls />
+      </div>
     </div>
   );
 };
