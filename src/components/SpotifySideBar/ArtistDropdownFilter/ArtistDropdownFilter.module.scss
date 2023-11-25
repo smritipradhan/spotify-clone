@@ -1,0 +1,45 @@
+.filterDropdownSecond {
+  .listContainer {
+    .listItem {
+      display: flex;
+      justify-content: space-between;
+      .listName {
+        padding: 12px 17px;
+        color: #eaeaea;
+        font-size: 13px;
+        cursor: pointer;
+      }
+      .listNameChecked {
+        padding: 12px 17px;
+        color: #eaeaea;
+        font-size: 13px;
+        cursor: pointer;
+        color: #26b857;
+        font-weight: 600;
+      }
+
+      .listNameChecked:hover {
+        background-color: #5f5959;
+      }
+      .check {
+        display: flex;
+        margin: auto 0px;
+        color: #26b857;
+      }
+    }
+    .listItem:hover {
+      background-color: #5f5959;
+    }
+  }
+}
+
+.dropdownHeader {
+  color: #b3b3b3;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 15px;
+}
+
+.divider {
+  background-color: #3c3c3c;
+}

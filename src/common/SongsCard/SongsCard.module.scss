@@ -2,6 +2,7 @@
   height: 230px;
   border-radius: 10px;
   width: 160px;
+  cursor: pointer;
   padding: 14px;
   background-color: rgb(66 66 65 / 13%);
   img {
@@ -9,4 +10,21 @@
     object-fit: inherit;
     height: 69%;
   }
+  .songName {
+    font-size: 15px;
+    color: white;
+    font-weight: 600;
+    margin-top: 16px;
+  }
+  .songAbout {
+    font-size: 12px;
+    color: #a7a7a7;
+    font-weight: 500;
+    margin-top: 10px;
+    overflow-wrap: break-word;
+  }
+}
+
+.recentlyPlayedCard:hover {
+  background-color: #5d57574f;
 }

@@ -1,0 +1,86 @@
+.playlistArtistContainer {
+  margin-top: 30px;
+  .playlistArtistChip {
+    display: flex;
+    gap: 10px;
+    .playlistArtists {
+      background-color: #232323;
+      color: white;
+      align-items: center;
+      justify-content: center;
+      display: inline-block;
+      padding: 0 15px;
+      height: 33px;
+      font-size: 12px;
+      line-height: 33px;
+      border-radius: 25px;
+      font-weight: 400;
+      cursor: pointer;
+    }
+    .playlistArtists:hover {
+      background-color: #2f2f2f;
+    }
+  }
+
+  .searchFilterContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    .searchArtist {
+      display: flex;
+      margin: auto 0px;
+      img {
+        height: 15px;
+      }
+    }
+    .contentFilter {
+      display: flex;
+      gap: 8px;
+      cursor: pointer;
+      color: #707070;
+      .content {
+        font-size: 15px;
+        font-weight: 600;
+        display: flex;
+        margin: auto;
+      }
+    }
+    .contentFilter:hover {
+      color: white;
+    }
+  }
+}
+
+.filterDropdownFirst {
+  .listContainer {
+    .listItem {
+      display: flex;
+      justify-content: space-between;
+      .listName {
+        padding: 12px 17px;
+        color: #eaeaea;
+        font-size: 13px;
+        cursor: pointer;
+      }
+
+      .check {
+        display: flex;
+        margin: auto;
+        margin: auto 0px;
+        color: #26b857;
+      }
+
+      .listNameChecked {
+        padding: 12px 17px;
+        color: #eaeaea;
+        font-size: 13px;
+        cursor: pointer;
+        color: #26b857;
+        font-weight: 600;
+      }
+    }
+    .listItem:hover {
+      background-color: #5f5959;
+    }
+  }
+}
