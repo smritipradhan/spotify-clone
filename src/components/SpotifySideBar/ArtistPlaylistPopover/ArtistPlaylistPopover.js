@@ -4,7 +4,13 @@ import React, { useState } from "react";
 import ArtistDropdownFilter from "../ArtistDropdownFilter/ArtistDropdownFilter";
 import styles from "./ArtistPlaylistPopover.module.scss";
 
-const ArtistPlaylistPopover = ({ id, anchorEl, handleClose, open }) => {
+const ArtistPlaylistPopover = ({
+  id,
+  anchorEl,
+  handleClose,
+  open,
+  setSortByText,
+}) => {
   const [sortByList, setSortByList] = useState([
     {
       listName: "Recents",
@@ -39,7 +45,8 @@ const ArtistPlaylistPopover = ({ id, anchorEl, handleClose, open }) => {
   ]);
 
   const handleSortByListChange = (event, index) => {
-    const selectedSortBy = sortByList.findIndex((item) => item.isSelected);
+    const selectedSortBy = sortByList.findIndex((item) => item?.isSelected);
+    console.log({ selectedSortBy });
     if (selectedSortBy === index) {
       //do nothing
     } else {
@@ -47,6 +54,9 @@ const ArtistPlaylistPopover = ({ id, anchorEl, handleClose, open }) => {
       updatedSortBy[index].isSelected = true;
       updatedSortBy[selectedSortBy].isSelected = false;
       setSortByList(updatedSortBy);
+
+      // Set the sort By Name
+      setSortByText(updatedSortBy[index]?.listName);
     }
   };
 
