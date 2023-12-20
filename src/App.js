@@ -10,6 +10,8 @@ const App = () => {
     <>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/artist/:artistId" element={<LandingPage />} />
+        <Route path="/playlist/:playlistId" element={<LandingPage />} />
       </Routes>
     </>
   );

@@ -9,7 +9,7 @@ const ArtistPlaylistList = () => {
       details: "Artist",
     },
     {
-      title: "Pritam",
+      title: "Arijit Singh",
       details: "Artist",
     },
     {

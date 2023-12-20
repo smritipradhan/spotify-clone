@@ -5,6 +5,7 @@ import RecentlyPlayed from "../../components/SpotifyRecents/RecentlyPlayed";
 import SideBar from "./../../components/SpotifySideBar/Sidebar/SideBar.js";
 import styles from "./LandingPage.module.scss";
 import KahoNaPyar from "./../../assets/songs/kahonaPyarHain.mp3";
+import Footer from "../../components/Footer/Footer";
 
 const LandingPage = () => {
   return (
@@ -16,6 +17,7 @@ const LandingPage = () => {
           <SpotifyMostPlayed />
           <RecentlyPlayed />
           <MadeFor />
+          <Footer />
         </div>
       </div>
       <div className={styles.player}>
