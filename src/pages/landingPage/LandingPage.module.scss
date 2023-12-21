@@ -1,27 +1,8 @@
 @import "./../../index.scss";
 
-.landingPageContainer {
-  background-color: black;
-  height: 100vh;
-  .player {
-    height: 60px;
-    position: absolute;
-    background-color: black;
-    z-index: 1;
-    bottom: 0px;
-    padding: 10px;
-  }
-}
-
-.sideBarAndMain {
-  display: flex;
-  justify-content: space-between;
-  height: 90vh;
-
-  .main {
-    width: 80vw;
-    background-color: #121212;
-    padding: 20px;
-    overflow-y: scroll;
-  }
+.main {
+  width: 80vw;
+  background-color: #121212;
+  padding: 20px;
+  overflow-y: scroll;
 }

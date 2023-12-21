@@ -8,3 +8,22 @@ body,
   scroll-behavior: smooth;
   font-family: "DM Sans", sans-serif;
 }
+
+.landingPageContainer {
+  background-color: black;
+  height: 100vh;
+  .player {
+    height: 60px;
+    position: absolute;
+    background-color: black;
+    z-index: 1;
+    bottom: 0px;
+    padding: 10px;
+  }
+}
+
+.sideBarAndMain {
+  display: flex;
+  justify-content: space-between;
+  height: 90vh;
+}
