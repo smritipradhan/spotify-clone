@@ -7,7 +7,7 @@ const ArtistDropdownFilter = (props) => {
 
   return (
     <div className={styles.filterDropdownSecond}>
-      <div className={styles.dropdownHeader}>{title}</div>
+      {title !== "" && <div className={styles.dropdownHeader}>{title}</div>}
       <div className={styles.listContainer}>
         {Array.isArray(list) &&
           list.length &&

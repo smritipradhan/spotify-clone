@@ -6,6 +6,7 @@ import ArtistPage from "./pages/artistPage/ArtistPage";
 import SideBar from "./components/SpotifySideBar/Sidebar/SideBar";
 import KahoNaPyar from "./assets/songs/kahonaPyarHain.mp3";
 import styles from "./App.module.scss";
+import { Playlist } from "./pages/playlistPage/Playlist";
 
 const App = () => {
   const { theme } = useContext(UserContext);
@@ -17,7 +18,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/artist/:artistId" element={<ArtistPage />} />
-          <Route path="/playlist/:playlistId" element={<LandingPage />} />
+          <Route path="/playlist/:playlistId" element={<Playlist />} />
         </Routes>
       </div>
       {/* <div className={styles.player}>

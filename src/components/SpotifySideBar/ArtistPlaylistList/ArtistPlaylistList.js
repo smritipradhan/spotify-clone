@@ -24,7 +24,7 @@ const ArtistPlaylistList = () => {
       {Array.isArray(artistPlaylistData) &&
         artistPlaylistData?.slice(0, 3).map((data) => {
           return (
-            <Link to="/artist/abc">
+            <Link to={data.details ===  "Artist" ? "/artist/abc": "/playlist/abc"}>
               <ArtistPlaylistCard name={data?.title} details={data?.details} />
             </Link>
           );
