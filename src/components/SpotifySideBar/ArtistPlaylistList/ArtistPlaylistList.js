@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ArtistPlaylistList.module.scss";
 import ArtistPlaylistCard from "../../../common/ArtistPlaylistCard/ArtistPlaylistCard";
+import { Link } from "react-router-dom";
 
 const ArtistPlaylistList = () => {
   const artistPlaylistData = [
@@ -23,7 +24,9 @@ const ArtistPlaylistList = () => {
       {Array.isArray(artistPlaylistData) &&
         artistPlaylistData?.slice(0, 3).map((data) => {
           return (
-            <ArtistPlaylistCard name={data?.title} details={data?.details} />
+            <Link to="/artist/abc">
+              <ArtistPlaylistCard name={data?.title} details={data?.details} />
+            </Link>
           );
         })}
     </div>

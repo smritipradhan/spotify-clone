@@ -23,10 +23,13 @@
   .artistName {
     color: white;
     font-size: 14px;
+    text-decoration: none;
   }
   .about {
     color: #a7a7a7;
     font-size: 12px;
+    text-align: left;
+    text-decoration: none;
   }
 }
 .card:hover {
