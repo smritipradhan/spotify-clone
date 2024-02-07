@@ -11,7 +11,7 @@ export const APIMethod = async (
 ) => {
   if (!axiosInstance) {
     axiosInstance = axios.create({
-      baseURL: "http://localhost:3000/api/v1/tours",
+      baseURL: "http://localhost:3000",
       headers: {
         "content-type": "application/json",
       },

@@ -4,16 +4,20 @@ import SpotifyMostPlayed from "../../components/SpotifyMostPlayed/SpotifyMostPla
 import RecentlyPlayed from "../../components/SpotifyRecents/RecentlyPlayed";
 import styles from "./LandingPage.module.scss";
 import Footer from "../../components/Footer/Footer";
+import SideBar from "../../components/SpotifySideBar/Sidebar/SideBar";
 
 const LandingPage = () => {
   return (
-    <div className={styles.main}>
-      <SpotifyHeader />
-      <SpotifyMostPlayed />
-      <RecentlyPlayed />
-      <MadeFor />
-      <Footer />
-    </div>
+    <>
+      <SideBar />
+      <section className={styles.main}>
+        <SpotifyHeader />
+        <SpotifyMostPlayed />
+        <RecentlyPlayed />
+        <MadeFor />
+        <Footer />
+      </section>
+    </>
   );
 };
 
