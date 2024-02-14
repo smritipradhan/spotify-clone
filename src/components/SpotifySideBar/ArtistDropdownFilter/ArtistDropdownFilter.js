@@ -3,7 +3,7 @@ import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
 import styles from "./ArtistDropdownFilter.module.scss";
 
 const ArtistDropdownFilter = (props) => {
-  const { title, list, handleChange } = props;
+  const { title, list, handleChange, onClick } = props;
 
   return (
     <div className={styles.filterDropdownSecond}>

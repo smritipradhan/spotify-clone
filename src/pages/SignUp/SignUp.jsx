@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import LoginFields from "../../components/LoginFields/LoginFields";
+import CustomizedSnackbars from "../../common/Snackbar/CustomizedSnackbar";
 
 const SignUp = () => {
   return (
@@ -9,6 +10,7 @@ const SignUp = () => {
         authenticationTitle="Sign Up to Spotify"
         buttonTitle="Sign Up"
       />
+      <CustomizedSnackbars />
     </section>
   );
 };

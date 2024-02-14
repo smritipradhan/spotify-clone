@@ -7,8 +7,14 @@ import styles from "./SpotifyHeader.module.scss";
 import Popover from "@mui/material/Popover";
 import { useState } from "react";
 import ArtistDropdownFilter from "../SpotifySideBar/ArtistDropdownFilter/ArtistDropdownFilter";
+import { useNavigate } from "react-router-dom";
+import { userActions } from "../../store/slices/userSlice";
+import { useDispatch } from "react-redux";
+import { getData } from "../../utils/apiUtils";
 
 const SpotifyHeader = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -37,7 +43,13 @@ const SpotifyHeader = () => {
     },
   ]);
 
-  const handleSortByListChange = (event, index) => {};
+  const handleSortByListChange = async (event, index) => {
+    if (index === 4) {
+      dispatch(userActions.authenticate(false));
+      const data = await getData("/logout");
+      console.log(data);
+    }
+  };
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
   return (

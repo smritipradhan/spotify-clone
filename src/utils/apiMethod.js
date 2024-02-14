@@ -1,16 +1,18 @@
-import axios, { AxiosRequestConfig, AxiosInstance, Method } from "axios";
+import axios from "axios";
 
-let axiosInstance: AxiosInstance;
+let axiosInstance;
+axios.defaults.withCredentials = true;
 
 export const APIMethod = async (
-  method: Method,
-  url: string,
-  data?: any,
+  method,
+  url,
+  data = {},
   contentType = "application/json",
-  responseType?: AxiosRequestConfig["responseType"]
+  responseType = ""
 ) => {
   if (!axiosInstance) {
     axiosInstance = axios.create({
+      withCredentials: true,
       baseURL: "http://localhost:3000",
       headers: {
         "content-type": "application/json",
@@ -25,6 +27,7 @@ export const APIMethod = async (
     responseType,
     headers: {
       "content-type": contentType,
+      withCredentials: true,
     },
   });
 };

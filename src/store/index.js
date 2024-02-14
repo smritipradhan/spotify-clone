@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./slices/counterSlice";
+import userReducer from "./slices/userSlice";
 import recentlyPlayedSongReducer from "./slices/recentlyPlayedSongsSlice";
 
 const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    user: userReducer,
     recentlyPlayedSong: recentlyPlayedSongReducer,
   },
 });
