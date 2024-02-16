@@ -13,7 +13,7 @@ export const APIMethod = async (
   if (!axiosInstance) {
     axiosInstance = axios.create({
       withCredentials: true,
-      baseURL: "http://localhost:3000",
+      baseURL: "http://localhost:8080",
       headers: {
         "content-type": "application/json",
       },
