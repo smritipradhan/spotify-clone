@@ -11,13 +11,13 @@ import { userActions } from "../../store/slices/userSlice";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import Container from "../Container/Container";
 
 const LandingPage = () => {
   const { isAuthenticated } = useSelector((state) => state.user);
 
   return (
-    <div className="flex">
-      <SideBar />
+    <Container>
       <section className={styles.main}>
         <SpotifyHeader />
         <SpotifyMostPlayed />
@@ -25,7 +25,7 @@ const LandingPage = () => {
         <MadeFor />
         <Footer />
       </section>
-    </div>
+    </Container>
   );
 };
 
