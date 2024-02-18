@@ -9,17 +9,19 @@ function createData(name, subscribers, duration) {
   return { name, subscribers, duration };
 }
 
-const rows = [
-  createData("Husn", 159, 6.0),
-  createData("Barishein", 237, 9.0),
-  createData("Alag Aaasman", 262, 16.0),
-  createData("Gul", 305, 3.7),
-  createData("Mazaak", 356, 16.0),
-];
-const handleTableRowClick = (row) => {
-  console.log(row);
-};
-const SongsTable = () => {
+const SongsTable = ({ songsList }) => {
+  const handleTableRowClick = (row) => {
+    console.log(row);
+  };
+
+  const rows = songsList?.map((songItem) => {
+    return {
+      name: songItem?.name,
+      subscribers: songItem?.subscribers,
+      duration: songItem?.duration,
+    };
+  });
+  console.log(songsList);
   return (
     <Table
       sx={{
@@ -37,7 +39,7 @@ const SongsTable = () => {
       }}
     >
       <TableBody>
-        {rows.map((row, index) => (
+        {rows?.map((row, index) => (
           <TableRow
             hover={true}
             key={row.name}
@@ -65,7 +67,7 @@ const SongsTable = () => {
                 width: "30px",
               }}
             >
-              <div className={classes.image}></div>
+              <div className={classes.image}>{/* <img src={image} /> */}</div>
             </TableCell>
             <TableCell
               component="th"

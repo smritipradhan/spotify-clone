@@ -12,9 +12,21 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import Container from "../Container/Container";
+import { songActions } from "../../store/slices/songsSlice";
 
 const LandingPage = () => {
+  const dispatch = useDispatch();
   const { isAuthenticated } = useSelector((state) => state.user);
+
+  const getSong = async () => {
+    const songData = await getData("/song");
+    console.log(songData);
+    dispatch(songActions.addSongs(songData?.data?.data));
+  };
+
+  useEffect(() => {
+    getSong();
+  }, []);
 
   return (
     <Container>
